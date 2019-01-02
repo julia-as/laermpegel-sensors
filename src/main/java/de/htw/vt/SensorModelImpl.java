@@ -1,17 +1,10 @@
 package de.htw.vt;
 
-import java.rmi.Naming;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.server.RemoteObject;
-import java.rmi.server.ServerNotActiveException;
 import java.util.*;
 
 public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject implements SensorModel {
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 8185498752647882345L;
 	
 	protected UUID id;
@@ -23,7 +16,7 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
     private Double rangeMax = 300.0;
     // Value is the current noise level
     private int value;
-
+    
 
     public SensorModelImpl() throws RemoteException {
         super();
@@ -42,7 +35,7 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
     6        0.000001   0.111 m
     7        0.0000001  1.11 cm
     8        0.00000001 1.11 mm*/
-    private void setData() {
+    void setData() {
         this.id = UUID.randomUUID();
         Random r = new Random();
         this.setValue(r.nextInt(201));
@@ -93,5 +86,7 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
     public int getValue() {
         return value;
     }
+    
+    
 }
 

@@ -5,10 +5,12 @@ import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.util.List;
 import java.util.Observable;
+import java.util.Observer;
 
 public class App extends Observable {
 
-    List<Observable> observers;
+//    List<Observer> observers;
+    SensorModelImpl sensor;
 
     public App(int numberOfInstances) {
 
@@ -16,9 +18,8 @@ public class App extends Observable {
             LocateRegistry.createRegistry(1099);
             while (true) {
                 for (int i = 0; i <= numberOfInstances; i++) {
-                    SensorModelImpl sensor = new SensorModelImpl();
+                    sensor = new SensorModelImpl();
                     String url = "rmi://localhost:1099/sensors/" + i;
-//                    String url = "rmi://localhost:1099/sensors/";
                     System.out.println("rmi url: " + url);
                     Naming.rebind(url, sensor);
                 }
@@ -33,6 +34,13 @@ public class App extends Observable {
         new App(3);
     }
 
-
+//    public void addObserver(Observable obj) {
+//        this.observers.add(obj);
+//    }
+// 
+//    public void removeObserver(Observable obj) {
+//        this.observers.remove(obj);
+//    }
+//
 
 }
