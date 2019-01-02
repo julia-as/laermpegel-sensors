@@ -15,14 +15,13 @@ public class App extends Observable {
         try {
             LocateRegistry.createRegistry(1099);
             while (true) {
-                //for (int i = 0; i <= numberOfInstances; i++) {
-                    // SensorService service = new SensorServiceImpl(numberOfInstances);
+                for (int i = 0; i <= numberOfInstances; i++) {
                     SensorModelImpl sensor = new SensorModelImpl();
-                  //  String url = "rmi://localhost:1099/sensors/" + i;
-                    String url = "rmi://localhost:1099/sensors/";
+                    String url = "rmi://localhost:1099/sensors/" + i;
+//                    String url = "rmi://localhost:1099/sensors/";
                     System.out.println("rmi url: " + url);
                     Naming.rebind(url, sensor);
-               // }
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

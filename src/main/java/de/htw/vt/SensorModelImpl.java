@@ -1,6 +1,9 @@
 package de.htw.vt;
 
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.server.RemoteObject;
+import java.rmi.server.ServerNotActiveException;
 import java.util.*;
 
 public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject implements SensorModel {
@@ -46,9 +49,12 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
         this.setY((rangeMin + (rangeMax - rangeMin) * r.nextDouble()));
     }
 
-    public SensorModel getSensor() {
-        System.out.println("In SensorModelImpl: getSensor() " + this.getX() + ", " + this.getY());
-        return this;
+    public String getSensor() {
+    	return "In SensorModelImpl: getSensor() \n"
+				+ "Longitude: " + this.getX() + "\nLatitude: " + this.getY();
+//        System.out.println("In SensorModelImpl: getSensor() \n "
+//				+ "Longitude: " + this.getX() + "\nLatitude: " + this.getY());
+//		return this;
     }
 
 //    public Map<UUID, SensorModelImpl> createInstance(int numberOfSensors) throws RemoteException {
