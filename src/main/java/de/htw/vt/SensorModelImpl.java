@@ -1,5 +1,6 @@
 package de.htw.vt;
 
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.RemoteObject;
@@ -51,7 +52,8 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
 
     public String getSensor() {
     	return "In SensorModelImpl: getSensor() \n"
-				+ "Longitude: " + this.getX() + "\nLatitude: " + this.getY();
+				+ "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
+				+ "\nValue: " + this.getValue() + " dB";
 //        System.out.println("In SensorModelImpl: getSensor() \n "
 //				+ "Longitude: " + this.getX() + "\nLatitude: " + this.getY());
 //		return this;
