@@ -6,7 +6,6 @@ import java.util.*;
 public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject implements SensorModel {
 
 	private static final long serialVersionUID = 8185498752647882345L;
-	
 	protected UUID id;
     // Longitude
     private Double x;
@@ -16,6 +15,7 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
     private Double rangeMax = 300.0;
     // Value is the current noise level
     private int value;
+    List<Observer> observers;
     
 
     public SensorModelImpl() throws RemoteException {
@@ -87,6 +87,16 @@ public class SensorModelImpl extends java.rmi.server.UnicastRemoteObject impleme
         return value;
     }
     
+    public void addObserver(Observer obj) {
+        this.observers.add(obj);
+    }
+ 
+    public void removeObserver(Observer obj) {
+        this.observers.remove(obj);
+    }
     
+    void changeData() {
+    	this.setData();
+    }
 }
 

@@ -3,44 +3,58 @@ package de.htw.vt;
 import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.Map;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-public class App extends Observable {
+public class App {
 
-//    List<Observer> observers;
-    SensorModelImpl sensor;
+	//    List<Observer> observers;
+	private Map<Integer, SensorModelImpl> sensors = new HashMap<>();;
+	ScheduledExecutorService scheduler;
+	
 
-    public App(int numberOfInstances) {
+	public App(int numberOfInstances) {
 
-        try {
-            LocateRegistry.createRegistry(1099);
-            while (true) {
-                for (int i = 0; i <= numberOfInstances; i++) {
-                    sensor = new SensorModelImpl();
-                    String url = "rmi://localhost:1099/sensors/" + i;
-                    System.out.println("rmi url: " + url);
-                    Naming.rebind(url, sensor);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+		scheduler = Executors.newScheduledThreadPool(numberOfInstances);
+		try {
+			LocateRegistry.createRegistry(1099);
 
-    public static void main(String args[]) {
-        // int i = args[0];
-        new App(3);
-    }
+			while (true) {
 
-//    public void addObserver(Observable obj) {
-//        this.observers.add(obj);
-//    }
-// 
-//    public void removeObserver(Observable obj) {
-//        this.observers.remove(obj);
-//    }
-//
+				for (int i = 0; i <= numberOfInstances; i++) {
+
+					final SensorModelImpl sensor = new SensorModelImpl();
+					sensors.put(i, sensor);
+					final String url = "rmi://localhost:1099/sensors/" + i;
+					System.out.println("rmi url: " + url);
+					Naming.rebind(url, sensor);
+
+					final Runnable task = new Runnable() {
+						public void run() {
+							sensor.changeData();	
+						}
+					};
+					scheduler.scheduleAtFixedRate(task, 0, 10, TimeUnit.SECONDS);
+				}
+			} 
+		}
+
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			System.out.println("Do nothing");
+		}
+	}
+
+
+	public static void main(String args[]) {
+		// int i = args[0];
+		new App(3);
+	}
 
 }
