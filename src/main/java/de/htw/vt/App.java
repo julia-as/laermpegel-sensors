@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -13,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class App {
 
 	//    List<Observer> observers;
-	private Map<Integer, SensorModelImpl> sensors = new HashMap<>();;
+	private Map<Integer, SensorImpl> sensors = new HashMap<>();;
 	ScheduledExecutorService scheduler;
 	
 
@@ -23,24 +22,24 @@ public class App {
 		try {
 			LocateRegistry.createRegistry(1099);
 
-			while (true) {
+			//while (true) {
 
 				for (int i = 0; i <= numberOfInstances; i++) {
 
-					final SensorModelImpl sensor = new SensorModelImpl();
+					final SensorImpl sensor = new SensorImpl();
 					sensors.put(i, sensor);
 					final String url = "rmi://localhost:1099/sensors/" + i;
 					System.out.println("rmi url: " + url);
 					Naming.rebind(url, sensor);
-
+					
 					final Runnable task = new Runnable() {
 						public void run() {
-							sensor.changeData();	
+							sensor.changeValue();
 						}
 					};
 					scheduler.scheduleAtFixedRate(task, 0, 10, TimeUnit.SECONDS);
 				}
-			} 
+			//s}
 		}
 
 		catch (IOException e) {
