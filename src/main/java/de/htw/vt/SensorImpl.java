@@ -1,9 +1,11 @@
 package de.htw.vt;
 
+import javafx.beans.Observable;
+
 import java.rmi.RemoteException;
 import java.util.*;
 
-public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements Sensor, Observer {
+public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements Sensor {
 
 	private static final long serialVersionUID = 8185498752647882345L;
 	protected UUID id;
@@ -45,25 +47,6 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         this.setY((rangeMin + (rangeMax - rangeMin) * r.nextDouble()));
     }
 
-    @Override
-    public String toString() {
-    	return "In SensorImpl: getSensor() \n"
-				+ "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
-				+ "\nValue: " + this.getValue() + " dB";
-//         this;
-    }
-
-//    public Map<UUID, SensorImpl> createInstance(int numberOfSensors) throws RemoteException {
-//        //   SensorImpl sensorModelImpl = new SensorImpl();
-//        Map<UUID, SensorImpl> sensors = new HashMap<>();
-//        for (int i = 0; i <= numberOfSensors; i++) {
-//            SensorImpl sensor = new SensorImpl();
-//            sensors.put(sensor.id, sensor);
-//            System.out.println("createInstance() in SensorImpl: " + id.toString() + getX() + getY() + getValue());
-//        }
-//        return sensors;
-//    }
-
     private void setX(Double x) {
         this.x = x;
     }
@@ -72,31 +55,30 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         this.y = y;
     }
 
-    private void setValue(int value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
-    private Double getX() {
+    public Double getX() {
         return x;
     }
 
-    private Double getY() {
+    public Double getY() {
         return y;
     }
 
-    private int getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void register(Observer obj) {
-        if(!observers.contains(obj)) {
-            this.observers.add(obj);
+    public void register(Observer o) {
+        if(!observers.contains(o)) {
+            this.observers.add(o);
         }
     }
 
-    public void unregister(Observer obj) {
-
-        this.observers.remove(obj);
+    public void unregister(Observer o) {
+        this.observers.remove(o);
     }
 
     //method to notify observers of change
@@ -105,13 +87,12 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     }
 
     //method to update the observer, used by subject
-    public void update(MyObservable o, Object arg) {
-        notifyObservers();
-    }
-
-    //method to get updates from subject
-    public Object getUpdate(Observer obj) {
-        return null;
+    public void update(Sensor s, int value) {
+        if (observers.size() > 0) {
+        for (Observer observer : observers) {
+            notifyObservers();
+        }
+        }
     }
 
     void changeValue() {
@@ -119,9 +100,20 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         this.setValue(r.nextInt(201));
         valueChanged = true;
         if (valueChanged) {
-            update(this, this.getValue());
+            if (observers.size() > 0) {
+                for (Observer observer : observers) {
+                    update(this, this.getValue());
+                }
+            }
             valueChanged = false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "In SensorImpl: getSensor() \n"
+                + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
+                + "\nValue: " + this.getValue() + " dB";
     }
 }
 

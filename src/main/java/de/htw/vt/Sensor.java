@@ -2,13 +2,16 @@ package de.htw.vt;
 
 import javafx.beans.Observable;
 
+import java.util.Observer;
 
-public interface Sensor  {
 
-    void register(MyObservable o);
-    void unregister(MyObservable o);
+public interface Sensor {
+
+    void register(Observer o);
+    void unregister(Observer o);
     void notifyObservers();
-
+    void update(Sensor s, int value);
+    void setValue(int value);
 
 }
 

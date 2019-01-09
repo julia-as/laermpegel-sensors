@@ -37,9 +37,9 @@ public class App {
 							sensor.changeValue();
 						}
 					};
-					scheduler.scheduleAtFixedRate(task, 0, 10, TimeUnit.SECONDS);
+					scheduler.scheduleAtFixedRate(task, 0, 5, TimeUnit.SECONDS);
 				}
-			//s}
+			//}
 		}
 
 		catch (IOException e) {
