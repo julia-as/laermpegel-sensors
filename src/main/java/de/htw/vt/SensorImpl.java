@@ -1,7 +1,5 @@
 package de.htw.vt;
 
-import javafx.beans.Observable;
-
 import java.rmi.RemoteException;
 import java.util.*;
 
@@ -18,7 +16,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     // Value is the current noise level
     private int value;
     private boolean valueChanged = false;
-    List<Observer> observers;
+    List<SensorObserver> observers;
     
 
     public SensorImpl() throws RemoteException {
@@ -42,7 +40,11 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     void setData() {
         this.id = UUID.randomUUID();
         Random r = new Random();
-        this.setValue(r.nextInt(201));
+        try {
+            this.setValue(r.nextInt(201));
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         this.setX((rangeMin + (rangeMax - rangeMin) * r.nextDouble()));
         this.setY((rangeMin + (rangeMax - rangeMin) * r.nextDouble()));
     }
@@ -55,7 +57,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         this.y = y;
     }
 
-    public void setValue(int value) {
+    public void setValue(int value) throws RemoteException {
         this.value = value;
     }
 
@@ -71,47 +73,52 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         return value;
     }
 
-    public void register(Observer o) {
+    public void register(SensorObserver o) throws RemoteException {
         if(!observers.contains(o)) {
             this.observers.add(o);
+            System.out.println("register(SensorObserver in Sensor): " + o.toString());
         }
     }
 
-    public void unregister(Observer o) {
+    public void unregister(SensorObserver o) throws RemoteException {
         this.observers.remove(o);
     }
 
     //method to notify observers of change
-    public void notifyObservers() {
+    public void notifyObservers() throws RemoteException {
 
     }
 
-    //method to update the observer, used by subject
-    public void update(Sensor s, int value) {
-        if (observers.size() > 0) {
-        for (Observer observer : observers) {
-            notifyObservers();
-        }
-        }
-    }
-
-    void changeValue() {
+    public void changeValue() throws RemoteException {
         Random r = new Random();
-        this.setValue(r.nextInt(201));
+        try {
+            this.setValue(r.nextInt(201));
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         valueChanged = true;
         if (valueChanged) {
+            System.out.println(observers.size());
             if (observers.size() > 0) {
-                for (Observer observer : observers) {
-                    update(this, this.getValue());
+                for (SensorObserver observer : observers) {
+                    observer.update(this.value);
                 }
             }
+            System.out.println("new value: " + this.value +
+                    "\n sensor id: " + this.id);
             valueChanged = false;
         }
     }
 
     @Override
     public String toString() {
-        return "In SensorImpl: getSensor() \n"
+        return "In SensorImpl: toString() \n"
+                + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
+                + "\nValue: " + this.getValue() + " dB";
+    }
+
+    public String writeToConsole() {
+        return "In SensorImpl: toString() \n"
                 + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
                 + "\nValue: " + this.getValue() + " dB";
     }

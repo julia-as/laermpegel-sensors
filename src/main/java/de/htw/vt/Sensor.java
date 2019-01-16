@@ -1,17 +1,18 @@
 package de.htw.vt;
 
-import javafx.beans.Observable;
 
-import java.util.Observer;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 
-public interface Sensor {
+public interface Sensor extends Remote {
 
-    void register(Observer o);
-    void unregister(Observer o);
-    void notifyObservers();
-    void update(Sensor s, int value);
-    void setValue(int value);
+    void register(SensorObserver o) throws RemoteException;
+    void unregister(SensorObserver o) throws RemoteException;
+    void notifyObservers() throws RemoteException;
+    void setValue(int value) throws RemoteException;
+    void changeValue() throws RemoteException;
+    String writeToConsole() throws RemoteException;
 
 }
 

@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b70c151-db39-4639-aa26-be9fc3a54eda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/vt/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/Sensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/vt/Sensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/laermpegel-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/laermpegel-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/MyObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/Sensor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.htw.vt.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-de.htw.vt.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.htw.vt.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/de.htw.vt.AppTest.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            <state relative-caret-position="-31">
+              <caret line="32" column="75" lean-forward="true" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -37,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="204">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,10 +46,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="119">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,16 +60,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="207">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2020#2021#0" expanded="true" />
-                <element signature="e#2046#2047#0" expanded="true" />
-                <element signature="e#2081#2082#0" expanded="true" />
-                <element signature="e#2107#2108#0" expanded="true" />
-                <element signature="e#2092#2093#0" expanded="true" />
-                <element signature="e#2132#2133#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +92,9 @@
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorSubject.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorModelImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" />
       </list>
@@ -130,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,13 +164,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laerm.client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -224,25 +221,30 @@
       <workItem from="1546681350183" duration="657000" />
       <workItem from="1546943558542" duration="1362000" />
       <workItem from="1547025180624" duration="3649000" />
-      <workItem from="1547032347071" duration="7383000" />
+      <workItem from="1547032347071" duration="8434000" />
+      <workItem from="1547217184609" duration="1512000" />
+      <workItem from="1547453704568" duration="4426000" />
+      <workItem from="1547540688618" duration="64000" />
+      <workItem from="1547631072640" duration="4194000" />
+      <workItem from="1547638883409" duration="2421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22965000" />
+    <option name="totallyTimeSpent" value="36633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18623482" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20242915" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.13499112" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44582593" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,50 +268,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/OSensorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#582#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorSubject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/OSensorModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorSubject.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorModel.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Observer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -324,42 +287,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="986">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="-31">
+          <caret line="32" column="75" lean-forward="true" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="207">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2020#2021#0" expanded="true" />
-            <element signature="e#2046#2047#0" expanded="true" />
-            <element signature="e#2081#2082#0" expanded="true" />
-            <element signature="e#2107#2108#0" expanded="true" />
-            <element signature="e#2092#2093#0" expanded="true" />
-            <element signature="e#2132#2133#0" expanded="true" />
           </folding>
         </state>
       </provider>
