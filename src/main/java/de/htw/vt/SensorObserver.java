@@ -5,6 +5,6 @@ import java.rmi.RemoteException;
 
 public interface SensorObserver extends Remote {
 
-    void update(int value) throws RemoteException;
+    void update(Sensor sensor, int value) throws RemoteException;
 
 }

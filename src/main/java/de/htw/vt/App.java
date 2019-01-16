@@ -23,8 +23,6 @@ public class App {
 		try {
 			LocateRegistry.createRegistry(1099);
 
-			//while (true) {
-
 				for (int i = 0; i <= numberOfInstances; i++) {
 
 					final Sensor sensor = new SensorImpl();

@@ -61,15 +61,15 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         this.value = value;
     }
 
-    public Double getX() {
+    public Double getX()throws RemoteException {
         return x;
     }
 
-    public Double getY() {
+    public Double getY()throws RemoteException {
         return y;
     }
 
-    public int getValue() {
+    public int getValue()throws RemoteException {
         return value;
     }
 
@@ -101,7 +101,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
             System.out.println(observers.size());
             if (observers.size() > 0) {
                 for (SensorObserver observer : observers) {
-                    observer.update(this.value);
+                    observer.update(this, this.value);
                 }
             }
             System.out.println("new value: " + this.value +
@@ -110,17 +110,17 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         }
     }
 
-    @Override
-    public String toString() {
-        return "In SensorImpl: toString() \n"
-                + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
-                + "\nValue: " + this.getValue() + " dB";
-    }
 
     public String writeToConsole() {
-        return "In SensorImpl: toString() \n"
-                + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
-                + "\nValue: " + this.getValue() + " dB";
+        try {
+            return "In SensorImpl: toString() \n"
+                    + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
+                    + "\nValue: " + this.getValue() + " dB";
+        }
+    catch (RemoteException e) {
+            e.printStackTrace();
+            return e.toString();
+    }
     }
 }
 
