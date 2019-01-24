@@ -26,6 +26,7 @@ public class App {
 				for (int i = 0; i <= numberOfInstances; i++) {
 
 					final Sensor sensor = new SensorImpl();
+					sensor.setId(i);
 					sensors.put(i, sensor);
 
 					final String url = "rmi://localhost:1099/sensors/" + i;

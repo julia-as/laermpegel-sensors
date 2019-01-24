@@ -6,13 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/Sensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/vt/Sensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/vt/SensorObserver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/laermpegel-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/laermpegel-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.htw.vt.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-de.htw.vt.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.htw.vt.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/de.htw.vt.AppTest.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,20 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+            <state relative-caret-position="187">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="81">
+              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="260">
+              <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,8 +87,8 @@
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorObserver.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java" />
       </list>
     </option>
   </component>
@@ -163,8 +156,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,25 +218,26 @@
       <workItem from="1547453704568" duration="4426000" />
       <workItem from="1547540688618" duration="64000" />
       <workItem from="1547631072640" duration="4194000" />
-      <workItem from="1547638883409" duration="11210000" />
+      <workItem from="1547638883409" duration="11897000" />
+      <workItem from="1548317077258" duration="3493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45422000" />
+    <option name="totallyTimeSpent" value="49602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20242915" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20566802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4831261" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4831261" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -259,7 +253,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.151417" />
+      <window_info active="true" anchor="right" id="Maven" order="5" visible="true" weight="0.151417" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
   </component>
@@ -286,13 +280,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/MyObservable.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -308,28 +319,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="81">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/SensorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/vt/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
         </state>
       </provider>
     </entry>

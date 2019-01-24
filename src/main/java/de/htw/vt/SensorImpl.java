@@ -6,7 +6,7 @@ import java.util.*;
 public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements Sensor {
 
 	private static final long serialVersionUID = 8185498752647882345L;
-	protected UUID id;
+	private int id;
     // Longitude
     private Double x;
     // Latitude
@@ -38,7 +38,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     7        0.0000001  1.11 cm
     8        0.00000001 1.11 mm*/
     void setData() {
-        this.id = UUID.randomUUID();
+       // this.id = UUID.randomUUID();
         Random r = new Random();
         try {
             this.setValue(r.nextInt(201));
@@ -71,6 +71,14 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
 
     public int getValue()throws RemoteException {
         return value;
+    }
+
+    public int getId() throws RemoteException {
+        return id;
+    }
+
+    public void setId(int id) throws RemoteException {
+        this.id = id;
     }
 
     public void register(SensorObserver o) throws RemoteException {
@@ -114,7 +122,8 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     public String writeToConsole() {
         try {
             return "In SensorImpl: toString() \n"
-                    + "Longitude: " + this.getX() + "\nLatitude: " + this.getY()
+                    + "Sensor ID: " + this.getId()
+                    + "\nLongitude: " + this.getX() + "\nLatitude: " + this.getY()
                     + "\nValue: " + this.getValue() + " dB";
         }
     catch (RemoteException e) {

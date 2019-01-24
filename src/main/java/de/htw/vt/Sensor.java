@@ -15,6 +15,8 @@ public interface Sensor extends Remote {
     String writeToConsole() throws RemoteException;
     Double getX() throws RemoteException;
     Double getY() throws RemoteException;
+    int getId() throws RemoteException;
+    void setId(int id) throws RemoteException;
     int getValue() throws RemoteException;
 }
 
