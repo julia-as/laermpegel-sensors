@@ -56,7 +56,7 @@
               <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>de.htw.vt.App/mainClass>
+                <mainClass>de.htw.vt.App</mainClass>
               </manifest>
             </archive>
           </configuration>
