@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 public class App {
 
-	//    List<Observer> observers;
 	private Map<Integer, Sensor> sensors = new HashMap<>();;
 	ScheduledExecutorService scheduler;
 	
@@ -33,11 +32,6 @@ public class App {
 					System.out.println("rmi url sensor: " + url);
 					Naming.rebind(url, sensor);
 
-//					final SensorObserver observer = new SensorImpl();
-//					final String urlObserver = "rmi://localhost:1099/observer" + i;
-//					System.out.println("rmi url observer: " + url);
-//					Naming.rebind(urlObserver, observer);
-					
 					final Runnable task = new Runnable() {
 						public void run() {
 							try {
@@ -50,17 +44,12 @@ public class App {
 					};
 					scheduler.scheduleAtFixedRate(task, 0, 5, TimeUnit.SECONDS);
 				}
-			//}
 		}
 
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-		finally {
-			System.out.println("Do nothing");
-		}
 	}
-
 
 	public static void main(String args[]) {
 		// int i = args[0];

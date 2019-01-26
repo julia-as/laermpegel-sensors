@@ -5,8 +5,8 @@ import java.util.*;
 
 public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements Sensor {
 
-	private static final long serialVersionUID = 8185498752647882345L;
-	private int id;
+    private static final long serialVersionUID = 8185498752647882345L;
+    private int id;
     // Longitude
     private Double x;
     // Latitude
@@ -17,7 +17,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     private int value;
     private boolean valueChanged = false;
     List<SensorObserver> observers;
-    
+
 
     public SensorImpl() throws RemoteException {
         super();
@@ -38,7 +38,6 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     7        0.0000001  1.11 cm
     8        0.00000001 1.11 mm*/
     void setData() {
-       // this.id = UUID.randomUUID();
         Random r = new Random();
         try {
             this.setValue(r.nextInt(201));
@@ -61,15 +60,15 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         this.value = value;
     }
 
-    public Double getX()throws RemoteException {
+    public Double getX() throws RemoteException {
         return x;
     }
 
-    public Double getY()throws RemoteException {
+    public Double getY() throws RemoteException {
         return y;
     }
 
-    public int getValue()throws RemoteException {
+    public int getValue() throws RemoteException {
         return value;
     }
 
@@ -82,7 +81,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
     }
 
     public void register(SensorObserver o) throws RemoteException {
-        if(!observers.contains(o)) {
+        if (!observers.contains(o)) {
             this.observers.add(o);
             System.out.println("register(SensorObserver in Sensor): " + o.toString());
         }
@@ -94,7 +93,6 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
 
     //method to notify observers of change
     public void notifyObservers() throws RemoteException {
-
     }
 
     public void changeValue() throws RemoteException {
@@ -106,7 +104,7 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
         }
         valueChanged = true;
         if (valueChanged) {
-            System.out.println(observers.size());
+            System.out.println("Size of observer list: " + observers.size());
             if (observers.size() > 0) {
                 for (SensorObserver observer : observers) {
                     observer.update(this, this.value);
@@ -125,11 +123,10 @@ public class SensorImpl extends java.rmi.server.UnicastRemoteObject implements S
                     + "Sensor ID: " + this.getId()
                     + "\nLongitude: " + this.getX() + "\nLatitude: " + this.getY()
                     + "\nValue: " + this.getValue() + " dB";
-        }
-    catch (RemoteException e) {
+        } catch (RemoteException e) {
             e.printStackTrace();
             return e.toString();
-    }
+        }
     }
 }
 
