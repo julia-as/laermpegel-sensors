@@ -45,7 +45,6 @@ public class App {
 					scheduler.scheduleAtFixedRate(task, 0, 5, TimeUnit.SECONDS);
 				}
 		}
-
 		catch (IOException e) {
 			e.printStackTrace();
 		}
