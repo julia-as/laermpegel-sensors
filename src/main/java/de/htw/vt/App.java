@@ -6,6 +6,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -51,8 +52,18 @@ public class App {
 	}
 
 	public static void main(String args[]) {
-		// int i = args[0];
-		new App(3);
+		int i;
+		if (args.length == 0) {
+			System.out.println("Please enter number of sensor instances.");
+			Scanner scanner = new Scanner(System.in);
+			i = Integer.parseInt(scanner.nextLine());
+			scanner.close();
+			new App(i);
+		}
+		else {
+			i = Integer.parseInt(args[0]);
+			new App(i);
+		}
 	}
 
 }
