@@ -1,5 +1,8 @@
 package de.htw.vt;
 
+import de.htw.interfaces.Sensor;
+import de.htw.interfaces.SensorObserver;
+
 import java.rmi.RemoteException;
 import java.util.*;
 

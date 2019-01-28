@@ -1,5 +1,7 @@
 package de.htw.vt;
 
+import de.htw.interfaces.Sensor;
+
 import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
